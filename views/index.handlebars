@@ -1,0 +1,28 @@
+<div class="container py-5">
+
+  <div class="row">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+
+      {{#if message}}
+      <div class="alert alert-danger" role="alert">
+        {{ message }}
+      </div>
+      {{/if}}
+
+      <form method="POST" action="/">
+        <div class="form-group">
+          <label for="exampleInputEmail1">信箱</label>
+          <input name="email" value="{{account.email}}" type="email" class="form-control" id="email"
+            aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">密碼</label>
+          <input name="password" value="{{account.password}}" type="password" class="form-control" id="password"
+            placeholder="Password">
+        </div>
+        <button id="ac_submit" type="submit" class="btn btn-primary">提交</button>
+      </form>
+    </div>
+  </div>
+
+</div>
